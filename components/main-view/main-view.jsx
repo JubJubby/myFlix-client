@@ -10,7 +10,13 @@ export const MainView = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/movies")
+    if (!token) {
+      return;
+    }
+
+    fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/movies", {
+      headers: { Authorization: `Bearer ${token}`}
+    })
       .then((response) => response.json())
       .then((data) => {
         const MoviesFromApi = data.map((doc) => {
@@ -27,7 +33,7 @@ export const MainView = () => {
 
         setMovies(MoviesFromApi);
       });
-  }, []);
+  }, [token]);
 
   if (!user) {
     return (
@@ -68,7 +74,7 @@ export const MainView = () => {
       </div>
       <button
         onClick={() => {
-          setUser(null);
+          setUser(null); setToken(null);
         }}
       >
         Logout

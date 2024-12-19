@@ -3,7 +3,6 @@ import { useState } from "react";
 export const LoginView = ({ onLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState(null);
 
   const handleSubmit = (event) => {
     // this prevents the default behavior of the form which is to reload the entire page
@@ -16,14 +15,23 @@ export const LoginView = ({ onLoggedIn }) => {
 
     fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify(data),
-    }).then((response) => {
-      if (response.ok) {
-        onLoggedIn(username);
-      } else {
-        alert("Login failed");
-      }
-    });
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Login response: ", data);
+        if (data.user) {
+          onLoggedIn(data.user, data.token);
+        } else {
+          alert("No such user");
+        }
+      })
+      .catch((e) => {
+        alert("Something went wrong");
+      });
   };
 
   return (
