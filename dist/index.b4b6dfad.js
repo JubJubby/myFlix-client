@@ -27390,7 +27390,7 @@ const MainView = ()=>{
     const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
     (0, _react.useEffect)(()=>{
         if (!token) return;
-        fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/movies", {
+        fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -28476,10 +28476,10 @@ const LoginView = ({ onLoggedIn })=>{
         // this prevents the default behavior of the form which is to reload the entire page
         event.preventDefault();
         const data = {
-            access: username,
-            secret: password
+            Username: username,
+            Password: password
         };
-        fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users", {
+        fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

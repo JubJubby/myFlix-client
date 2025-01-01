@@ -17,7 +17,7 @@ export const MainView = () => {
       return;
     }
 
-    fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/movies", {
+    fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users", {
       headers: { Authorization: `Bearer ${token}`}
     })
       .then((response) => response.json())

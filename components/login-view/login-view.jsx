@@ -9,11 +9,11 @@ export const LoginView = ({ onLoggedIn }) => {
     event.preventDefault();
 
     const data = {
-      access: username,
-      secret: password,
+      Username: username,
+      Password: password,
     };
 
-    fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users", {
+    fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
