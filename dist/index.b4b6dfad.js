@@ -2960,8 +2960,8 @@ var _indexScss = require("./index.scss");
 const MyFlixApplication = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainView.MainView), {}, void 0, false, {
         fileName: "src/index.jsx",
-        lineNumber: 9,
-        columnNumber: 12
+        lineNumber: 10,
+        columnNumber: 9
     }, undefined);
 };
 _c = MyFlixApplication;
@@ -2971,7 +2971,7 @@ const root = (0, _client.createRoot)(container);
 // Tells React to render the app in the root DOM element
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(MyFlixApplication, {}, void 0, false, {
     fileName: "src/index.jsx",
-    lineNumber: 17,
+    lineNumber: 19,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -27390,7 +27390,7 @@ const MainView = ()=>{
     const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
     (0, _react.useEffect)(()=>{
         if (!token) return;
-        fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users", {
+        fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/movies", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
