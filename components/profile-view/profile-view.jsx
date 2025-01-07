@@ -26,7 +26,7 @@ export const ProfileView = () => {
       };
   
       fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users", {
-        method: "POST",
+        method: "PUT",
         body: JSON.stringify(data),
         headers: {
           "Content-Type": "application/json",
