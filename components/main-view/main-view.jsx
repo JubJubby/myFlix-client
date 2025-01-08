@@ -3,6 +3,7 @@ import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
+import { ProfileView } from "../profile-view/profile-view";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -15,6 +16,7 @@ export const MainView = () => {
   const [token, setToken] =useState(storedToken? storedToken : null);
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const [favoriteMovies, setFavoriteMovies] = useState(null);
 
   useEffect(() => {
     if (!token) {
@@ -90,7 +92,10 @@ export const MainView = () => {
                   <Col>The list is empty!</Col>
                 ) : (
                   <Col>
-                    <MovieView movies={movies} />
+                    <MovieView 
+                      movies={movies} 
+                      favoriteMovies={favoriteMovies}
+                    />
                   </Col>
                 )}
               </>
@@ -102,7 +107,7 @@ export const MainView = () => {
               <>
                 {!user ? (
                   <Navigate to="/login" replace />
-                ) : movie.length === 0 ? (
+                ) : movies.length === 0 ? (
                   <Col>The list is empty!</Col>
                 ) : (
                   <>
@@ -112,6 +117,21 @@ export const MainView = () => {
                       </Col>
                     ))}
                   </>
+                )}
+              </>
+            }
+          />
+          <Route 
+            path="/profile"
+            element={
+              <>
+                {user ? (
+                  <Navigate to="/login" replace />
+                ) : (
+                  <ProfileView
+                    user={user}
+                    movies={movies}
+                    favoriteMovies={favoriteMovies}
                 )}
               </>
             }
