@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { MovieCard } from "../movie-card/movie-card";
 import "./profile-view.scss";
+import { Navigate } from "react-router";
 
 export const ProfileView = () => {
     const localUser = JSON.parse(localStorage.getItem("user"));
@@ -19,7 +20,7 @@ export const ProfileView = () => {
         event.preventDefault();
         
         fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users/:id/:movieTitle", {
-            method: "DELETE"
+            method: "DELETE",
             body: JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json",
@@ -45,7 +46,7 @@ export const ProfileView = () => {
         Birthday: birthday,
       };
   
-      fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users", {
+      fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users/:Username", {
         method: "PUT",
         body: JSON.stringify(data),
         headers: {
@@ -59,7 +60,26 @@ export const ProfileView = () => {
           alert("Signup failed");
         }
       });
+
+      fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users/:Username", {
+        method: "DELETE",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }).then((response) => {
+        if (response.ok) {
+          alert("Delete successful");
+          window.location.reload();
+        } else {
+          alert("Delete failed");
+        }
+      });
     };
+
+    const handleLogout = () => {
+        onLoggedOut();
+    }
   
     return (
       <Form onSubmit={handleSubmit}>

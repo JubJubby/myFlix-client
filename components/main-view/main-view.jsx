@@ -44,13 +44,20 @@ export const MainView = () => {
       });
   }, [token]);
 
+  const handleLogout = () => {
+    setUser(null);
+    setToken(null);
+    localStorage.clear();
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
+
   return (
     <BrowserRouter>
       <NavigationBar
         user={user}
-        onLoggedOut={() => {
-          setUser(null);
-        }}
+        onLoggedOut={handleLogout}
       />
       <Row className="justify-content-md-center">
         <Routes>
@@ -132,6 +139,7 @@ export const MainView = () => {
                     user={user}
                     movies={movies}
                     favoriteMovies={favoriteMovies}
+                    onLoggedOut={handleLogout}
                 )}
               </>
             }
