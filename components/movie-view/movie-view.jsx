@@ -1,8 +1,12 @@
 import "./movie-view.scss";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import useParams from "react-router";
+import Link from "react-router-dom";
 
 export const MovieView = ({movie, onBackClick}) => {
+  const { movieID } = useParams();
+  const movie = movies.find((movie) => movie.id === movieID );
   return (
     <Container>
       <Row className="w-100">
@@ -26,7 +30,9 @@ export const MovieView = ({movie, onBackClick}) => {
           <span>{movie.director}</span>
         </Col>
         <Row className="w-10">
-          <button className="back-button" onClick={onBackClick}>Back</button>
+          <Link to="/">
+            <button className="back-button">Back</button>
+          </Link>
         </Row>
       </Row>
     </Container>
