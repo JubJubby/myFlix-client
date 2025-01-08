@@ -5,16 +5,36 @@ import "./profile-view.scss";
 
 export const ProfileView = () => {
     const localUser = JSON.parse(localStorage.getItem("user"));
-    const favoriteMovies = movies.filter((movie) => {
-        return localUser.FavoriteMovies.includes(movie._id);
-    });
-
+    // const favoriteMovies = movies.filter((movie) => {
+    //     return localUser.FavoriteMovies.includes(movie._id);
+    // });
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
     const [birthday, setBirthday] = useState("");
+    const [favoriteMovies, setFavoriteMovies] = useState("");
   
+    const handleDeleteFavoriteMovie = (event) => {
+        event.preventDefault();
+        
+        fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users/:id/:movieTitle", {
+            method: "DELETE"
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }).then(response => {
+            if (!response.ok) {
+                alert("Movie not in favorites");
+            } else {
+                favoriteMovies = movies.filter((movie) => {
+                    return localUser.FavoriteMovies.includes(movie._id);
+                });
+            }
+        }
+    };
+    
     const handleSubmit = (event) => {
       event.preventDefault();
   
