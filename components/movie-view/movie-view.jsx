@@ -1,10 +1,11 @@
 import "./movie-view.scss";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import useParams from "react-router";
-import Link from "react-router-dom";
+import { useParams } from "react-router";
+import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
-export const MovieView = ({movie, onBackClick}) => {
+export const MovieView = ({ movies }) => {
   const { movieID } = useParams();
   const movie = movies.find((movie) => movie.id === movieID );
   return (
