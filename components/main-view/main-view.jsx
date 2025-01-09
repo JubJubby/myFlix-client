@@ -90,7 +90,7 @@ export const MainView = () => {
             }
           />
           <Route
-            path="/movies/:movieTitle"
+            path="/movies/:movieID"
             element={
               <>
                 {!user ? (
@@ -132,7 +132,7 @@ export const MainView = () => {
             path="/profile"
             element={
               <>
-                {user ? (
+                {!user ? (
                   <Navigate to="/login" replace />
                 ) : (
                   <ProfileView
@@ -140,6 +140,7 @@ export const MainView = () => {
                     movies={movies}
                     favoriteMovies={favoriteMovies}
                     onLoggedOut={handleLogout}
+                  />
                 )}
               </>
             }
