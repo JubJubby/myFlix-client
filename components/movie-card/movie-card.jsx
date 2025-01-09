@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import Link from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //MovieCard function component
 export const MovieCard = ({movie}) => {
@@ -12,7 +12,7 @@ export const MovieCard = ({movie}) => {
       <Card.Body>
         <Card.Title>{movie.title}</Card.Title>
         <Card.Text>{movie.director}</Card.Text>
-        <Link to ={"/movies/${movie.id}"}>
+        <Link to ={`/movies/${movie.id}`}>
           <Button>Open</Button>
         </Link>
       </Card.Body>
