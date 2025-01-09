@@ -33,7 +33,7 @@ export const ProfileView = () => {
                     return localUser.FavoriteMovies.includes(movie._id);
                 });
             }
-        }
+        })
     };
     
     const handleSubmit = (event) => {
