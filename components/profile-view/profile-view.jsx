@@ -72,20 +72,29 @@ export const ProfileView = ({ onLoggedOut }) => {
       })
       .catch((error) => console.error("Error updating profile:", error));
 
-      // fetch("https://jub-flix-e9807f9b5fd0.herokuapp.com/users/:Username", {
-      //   method: "DELETE",
-      //   body: JSON.stringify(data),
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      // }).then((response) => {
-      //   if (response.ok) {
-      //     alert("Delete successful");
-      //     window.location.reload();
-      //   } else {
-      //     alert("Delete failed");
-      //   }
-      // });
+      fetch(`https://jub-flix-e9807f9b5fd0.herokuapp.com/users/${localUser.Username}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`
+        },
+        body: JSON.stringify(data)
+      }).then((response) => {
+        if (response.ok) {
+          onLoggedOut();
+        } else {
+          return response.json()
+          .then((err) => 
+            Promise.reject(
+              `Delete failed: ${err.errors?.[0]?.msg || "Unknown error"}`
+            ));
+        }
+      })
+      .then((updatedUser) => {
+        alert("Profile deleted successfully!");
+        localStorage.setItem(null);
+      })
+      .catch((error) => console.error("Error deleting profile:", error));
     };
 
     const handleLogout = () => {
