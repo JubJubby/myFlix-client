@@ -65,7 +65,7 @@ export const LoginView = ({ onLoggedIn }) => {
       <Button variant="primary" type="submit">
         Submit
       </Button>
-      <Link to ={"/signup-view/signup-view"}>
+      <Link to ={"/signup"}>
           <Button>Sign up</Button>
       </Link>
     </Form>

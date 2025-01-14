@@ -84,7 +84,7 @@ export const SignupView = () => {
       <Button variant="primary" type="submit">
         Submit
       </Button>
-      <Link to ={"/login-view/login-view"}>
+      <Link to ={"/login"}>
           <Button>Log in</Button>
       </Link>
     </Form>
