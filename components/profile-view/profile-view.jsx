@@ -7,7 +7,7 @@ import { Navigate } from "react-router";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-export const ProfileView = ({ onLoggedOut }) => {
+export const ProfileView = ({ movies, onLoggedOut }) => {
     const localUser = JSON.parse(localStorage.getItem("user"));
 
     const [username, setUsername] = useState(localUser?.Username || "");
@@ -15,7 +15,10 @@ export const ProfileView = ({ onLoggedOut }) => {
     const [email, setEmail] = useState(localUser?.email || "");
     const [birthday, setBirthday] = useState(localUser?.Birthday || "");
     
-    
+    const favoriteMovies = movies.filter((movie) => 
+      localUser.FavoriteMovies.includes(movie.id)
+    );
+
     const handleSubmit = (event) => {
       event.preventDefault();
   
@@ -142,7 +145,7 @@ export const ProfileView = ({ onLoggedOut }) => {
 
         <h1>Favorite Movies</h1>
         <Row className="w-100">
-          {favoriteMovie.length > 0 ? (
+          {favoriteMovies.length > 0 ? (
             favoriteMovies.map((movie) => (
               <Col className="mb-4" key={movie.id} md={3}>
                 <MovieCard movie={movie} />
