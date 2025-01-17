@@ -6,22 +6,25 @@ import { Link } from "react-router-dom";
 
 //MovieCard function component
 export const MovieCard = ({movie}) => {
-  const user = JSON.parse(localStorage.getItem("user"));
-  const token = localStorage.getItem("token");
-
   const isFavoriteAlready = user?.FavoriteMovies?.includes(movie.id) || false;
-
   const [isFavorite, setIsFavorite] = useState(isFavoriteAlready);
 
   const handleFavoriteToggle = () => {
+
+    const user = JSON.parse(localStorage.getItem("user"));
+    const token = localStorage.getItem("token");
+
     if (!user || !token) {
       alert("Please log in to manage favorites");
       return;
     }
 
-    fetch(`https://jub-flix-e9807f9b5fd0.herokuapp.com/users/${user.Username}/movies/${movie.id}`,
+    const method = isFavorite ? "DELETE" : "POST";
+    const url = `https://jub-flix-e9807f9b5fd0.herokuapp.com/users/${user.Username}/movies/${movie.id}`;
+
+    fetch(url,
       {
-        method: "POST",
+        method: method,
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token},`
@@ -36,50 +39,14 @@ export const MovieCard = ({movie}) => {
           Promise.reject(`Failed to update favorites: ${err.errors?.[0]?.msg || "Unknown error"}`));
       }
     })
-    .then((updatedUser => {
+    .then((updatedUser) => {
       localStorage.setItem("user", JSON.stringify(updatedUser));
-      setIsFavorite(true);
-      alert("Movie added to favorites");
+      setIsFavorite(!isFavorite);
+      alert(isFavorite ? "Movie removed from favorites" : "Movie added to favorites");
     })
     .catch((error) => {
       console.error("Error updating favorites: ", error);
-    }));
-  };
-
-  const handleDeleteFavoriteMovie = () => {
-    if (!user || !token) {
-      alert("Please log in to manage favorites");
-      return;
-    }
-    setIsFavorite(false);
-    alert("Movie removed from favorites");
-
-    // remove movie from favorites, needs to be updated with backend endpoint working properly
-    // fetch(`https://jub-flix-e9807f9b5fd0.herokuapp.com/users/${user.Username}/${movie.id}`,
-    //   {
-    //     method: "DELETE",
-    //     headers: {
-    //     "Content-Type": "application/json",
-    //     Authorization: `Bearer ${token},`
-    //     },
-    //   }
-    // ).then((response) => {
-    //   if (response.ok) {
-    //     return response.json();
-    //   } else {
-    //     return response.json()
-    //       .then((err) => 
-    //         Promise.reject(`Failed to remove favorite: ${err.errors?.[0]?.msg || "Unknown error"}`));
-    //   }
-    // }).then((updatedUser) => {
-    //   localStorage.setItem("user", JSON.stringify(updatedUser));
-
-    //   setIsFavorite(!isFavorite);
-
-    //   alert("Movie removed from favorites");
-    // }).catch((error) => {
-    //   console.error("Error updating favorites: ", error);
-    // });
+    });
   };
 
   return (
@@ -89,13 +56,11 @@ export const MovieCard = ({movie}) => {
         <Card.Title>{movie.title}</Card.Title>
         <Card.Text>{movie.director}</Card.Text>
         <Link to ={`/movies/${movie.id}`}>
-          <Button>Open</Button>
+          <Button variant="primary">Open</Button>
         </Link>
         <Button 
           variant={isFavorite ? "danger" : "success"} 
-          onClick={
-            isFavorite ? handleDeleteFavoriteMovie : handleFavoriteToggle
-          }
+          onClick={handleFavoriteToggle}
         >
           {isFavorite ? "Remove from Favorites" : "Add to favorites"}
         </Button>
