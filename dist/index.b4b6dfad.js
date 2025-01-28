@@ -27245,7 +27245,7 @@ var _col = require("react-bootstrap/Col");
 var _colDefault = parcelHelpers.interopDefault(_col);
 var _row = require("react-bootstrap/Row");
 var _rowDefault = parcelHelpers.interopDefault(_row);
-var _reactRouterDom = require("react-router-dom");
+var _reactRouter = require("react-router");
 var _s = $RefreshSig$();
 const MainView = ()=>{
     _s();
@@ -27287,7 +27287,7 @@ const MainView = ()=>{
         localStorage.removeItem("token");
         navigate("/login");
     };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.BrowserRouter), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navigationBar.NavigationBar), {
                 user: user,
@@ -27299,12 +27299,12 @@ const MainView = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
                 className: "justify-content-md-center",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Routes), {
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
                             path: "/signup",
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                                children: user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Navigate), {
+                                children: user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Navigate), {
                                     to: "/"
                                 }, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     md: 5,
@@ -27316,10 +27316,10 @@ const MainView = ()=>{
                             lineNumber: 64,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
                             path: "/login",
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                                children: user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Navigate), {
+                                children: user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Navigate), {
                                     to: "/"
                                 }, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     md: 5,
@@ -27333,10 +27333,10 @@ const MainView = ()=>{
                             lineNumber: 78,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
                             path: "/movies/:movieID",
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                                children: !user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Navigate), {
+                                children: !user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Navigate), {
                                     to: "/login",
                                     replace: true
                                 }, void 0, false, void 0, void 0) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
@@ -27353,10 +27353,10 @@ const MainView = ()=>{
                             lineNumber: 92,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
                             path: "/",
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                                children: !user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Navigate), {
+                                children: !user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Navigate), {
                                     to: "/login",
                                     replace: true
                                 }, void 0, false, void 0, void 0) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
@@ -27376,10 +27376,10 @@ const MainView = ()=>{
                             lineNumber: 111,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
                             path: "/profile",
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                                children: !user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Navigate), {
+                                children: !user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Navigate), {
                                     to: "/login",
                                     replace: true
                                 }, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileView.ProfileView), {
@@ -27422,7 +27422,7 @@ $RefreshReg$(_c, "MainView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"8z54c","../movie-view/movie-view":"lNY7v","../login-view/login-view":"82yVY","../signup-view/signup-view":"jDmiJ","../profile-view/profile-view":"loco3","../navigation-bar/navigation-bar":"bpgC4","react-bootstrap/Col":"2L2I6","react-bootstrap/Row":"cMC39","react-router-dom":"lyno9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8z54c":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"8z54c","../movie-view/movie-view":"lNY7v","../login-view/login-view":"82yVY","../signup-view/signup-view":"jDmiJ","../profile-view/profile-view":"loco3","../navigation-bar/navigation-bar":"bpgC4","react-bootstrap/Col":"2L2I6","react-bootstrap/Row":"cMC39","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8z54c":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$42ca = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27441,7 +27441,7 @@ var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _card = require("react-bootstrap/Card");
 var _cardDefault = parcelHelpers.interopDefault(_card);
-var _reactRouterDom = require("react-router-dom");
+var _reactRouter = require("react-router");
 var _s = $RefreshSig$();
 const MovieCard = ({ movie })=>{
     _s();
@@ -27501,7 +27501,7 @@ const MovieCard = ({ movie })=>{
                         lineNumber: 57,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
                         to: `/movies/${movie.id}`,
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                             variant: "primary",
@@ -27559,7 +27559,7 @@ $RefreshReg$(_c, "MovieCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","react-bootstrap/Button":"aPzUt","react-bootstrap/Card":"lAynp","react-router-dom":"lyno9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7wKI2":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","react-bootstrap/Button":"aPzUt","react-bootstrap/Card":"lAynp","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7wKI2":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -29708,27 +29708,9 @@ const CardTitle = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: Co
 CardTitle.displayName = "CardTitle";
 exports.default = CardTitle;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","./divWithClassName":"eDg7t","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lyno9":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","./divWithClassName":"eDg7t","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dXVwI":[function(require,module,exports) {
 /**
- * react-router-dom v7.1.1
- *
- * Copyright (c) Remix Software Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.md file in the root directory of this source tree.
- *
- * @license MIT
- */ // index.ts
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "HydratedRouter", ()=>(0, _reactRouter.HydratedRouter));
-parcelHelpers.export(exports, "RouterProvider", ()=>(0, _reactRouter.RouterProvider));
-var _reactRouter = require("react-router");
-parcelHelpers.exportAll(_reactRouter, exports);
-
-},{"react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dXVwI":[function(require,module,exports) {
-/**
- * react-router v7.1.1
+ * react-router v7.1.3
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -29738,122 +29720,122 @@ parcelHelpers.exportAll(_reactRouter, exports);
  * @license MIT
  */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Await", ()=>(0, _chunkK6AXKMTTMjs.Await));
-parcelHelpers.export(exports, "BrowserRouter", ()=>(0, _chunkK6AXKMTTMjs.BrowserRouter));
-parcelHelpers.export(exports, "Form", ()=>(0, _chunkK6AXKMTTMjs.Form));
-parcelHelpers.export(exports, "HashRouter", ()=>(0, _chunkK6AXKMTTMjs.HashRouter));
-parcelHelpers.export(exports, "IDLE_BLOCKER", ()=>(0, _chunkK6AXKMTTMjs.IDLE_BLOCKER));
-parcelHelpers.export(exports, "IDLE_FETCHER", ()=>(0, _chunkK6AXKMTTMjs.IDLE_FETCHER));
-parcelHelpers.export(exports, "IDLE_NAVIGATION", ()=>(0, _chunkK6AXKMTTMjs.IDLE_NAVIGATION));
-parcelHelpers.export(exports, "Link", ()=>(0, _chunkK6AXKMTTMjs.Link));
-parcelHelpers.export(exports, "Links", ()=>(0, _chunkK6AXKMTTMjs.Links));
-parcelHelpers.export(exports, "MemoryRouter", ()=>(0, _chunkK6AXKMTTMjs.MemoryRouter));
-parcelHelpers.export(exports, "Meta", ()=>(0, _chunkK6AXKMTTMjs.Meta));
-parcelHelpers.export(exports, "NavLink", ()=>(0, _chunkK6AXKMTTMjs.NavLink));
-parcelHelpers.export(exports, "Navigate", ()=>(0, _chunkK6AXKMTTMjs.Navigate));
-parcelHelpers.export(exports, "NavigationType", ()=>(0, _chunkK6AXKMTTMjs.Action));
-parcelHelpers.export(exports, "Outlet", ()=>(0, _chunkK6AXKMTTMjs.Outlet));
-parcelHelpers.export(exports, "PrefetchPageLinks", ()=>(0, _chunkK6AXKMTTMjs.PrefetchPageLinks));
-parcelHelpers.export(exports, "Route", ()=>(0, _chunkK6AXKMTTMjs.Route));
-parcelHelpers.export(exports, "Router", ()=>(0, _chunkK6AXKMTTMjs.Router));
-parcelHelpers.export(exports, "RouterProvider", ()=>(0, _chunkK6AXKMTTMjs.RouterProvider));
-parcelHelpers.export(exports, "Routes", ()=>(0, _chunkK6AXKMTTMjs.Routes));
-parcelHelpers.export(exports, "Scripts", ()=>(0, _chunkK6AXKMTTMjs.Scripts));
-parcelHelpers.export(exports, "ScrollRestoration", ()=>(0, _chunkK6AXKMTTMjs.ScrollRestoration));
-parcelHelpers.export(exports, "ServerRouter", ()=>(0, _chunkK6AXKMTTMjs.ServerRouter));
-parcelHelpers.export(exports, "StaticRouter", ()=>(0, _chunkK6AXKMTTMjs.StaticRouter));
-parcelHelpers.export(exports, "StaticRouterProvider", ()=>(0, _chunkK6AXKMTTMjs.StaticRouterProvider));
-parcelHelpers.export(exports, "UNSAFE_DataRouterContext", ()=>(0, _chunkK6AXKMTTMjs.DataRouterContext));
-parcelHelpers.export(exports, "UNSAFE_DataRouterStateContext", ()=>(0, _chunkK6AXKMTTMjs.DataRouterStateContext));
-parcelHelpers.export(exports, "UNSAFE_ErrorResponseImpl", ()=>(0, _chunkK6AXKMTTMjs.ErrorResponseImpl));
-parcelHelpers.export(exports, "UNSAFE_FetchersContext", ()=>(0, _chunkK6AXKMTTMjs.FetchersContext));
-parcelHelpers.export(exports, "UNSAFE_FrameworkContext", ()=>(0, _chunkK6AXKMTTMjs.FrameworkContext));
-parcelHelpers.export(exports, "UNSAFE_LocationContext", ()=>(0, _chunkK6AXKMTTMjs.LocationContext));
-parcelHelpers.export(exports, "UNSAFE_NavigationContext", ()=>(0, _chunkK6AXKMTTMjs.NavigationContext));
-parcelHelpers.export(exports, "UNSAFE_RemixErrorBoundary", ()=>(0, _chunkK6AXKMTTMjs.RemixErrorBoundary));
-parcelHelpers.export(exports, "UNSAFE_RouteContext", ()=>(0, _chunkK6AXKMTTMjs.RouteContext));
-parcelHelpers.export(exports, "UNSAFE_ServerMode", ()=>(0, _chunkK6AXKMTTMjs.ServerMode));
-parcelHelpers.export(exports, "UNSAFE_SingleFetchRedirectSymbol", ()=>(0, _chunkK6AXKMTTMjs.SingleFetchRedirectSymbol));
-parcelHelpers.export(exports, "UNSAFE_ViewTransitionContext", ()=>(0, _chunkK6AXKMTTMjs.ViewTransitionContext));
-parcelHelpers.export(exports, "UNSAFE_createBrowserHistory", ()=>(0, _chunkK6AXKMTTMjs.createBrowserHistory));
-parcelHelpers.export(exports, "UNSAFE_createClientRoutes", ()=>(0, _chunkK6AXKMTTMjs.createClientRoutes));
-parcelHelpers.export(exports, "UNSAFE_createClientRoutesWithHMRRevalidationOptOut", ()=>(0, _chunkK6AXKMTTMjs.createClientRoutesWithHMRRevalidationOptOut));
-parcelHelpers.export(exports, "UNSAFE_createRouter", ()=>(0, _chunkK6AXKMTTMjs.createRouter));
-parcelHelpers.export(exports, "UNSAFE_decodeViaTurboStream", ()=>(0, _chunkK6AXKMTTMjs.decodeViaTurboStream));
-parcelHelpers.export(exports, "UNSAFE_deserializeErrors", ()=>(0, _chunkK6AXKMTTMjs.deserializeErrors));
-parcelHelpers.export(exports, "UNSAFE_getPatchRoutesOnNavigationFunction", ()=>(0, _chunkK6AXKMTTMjs.getPatchRoutesOnNavigationFunction));
-parcelHelpers.export(exports, "UNSAFE_getSingleFetchDataStrategy", ()=>(0, _chunkK6AXKMTTMjs.getSingleFetchDataStrategy));
-parcelHelpers.export(exports, "UNSAFE_invariant", ()=>(0, _chunkK6AXKMTTMjs.invariant));
-parcelHelpers.export(exports, "UNSAFE_mapRouteProperties", ()=>(0, _chunkK6AXKMTTMjs.mapRouteProperties));
-parcelHelpers.export(exports, "UNSAFE_shouldHydrateRouteLoader", ()=>(0, _chunkK6AXKMTTMjs.shouldHydrateRouteLoader));
-parcelHelpers.export(exports, "UNSAFE_useFogOFWarDiscovery", ()=>(0, _chunkK6AXKMTTMjs.useFogOFWarDiscovery));
-parcelHelpers.export(exports, "UNSAFE_useScrollRestoration", ()=>(0, _chunkK6AXKMTTMjs.useScrollRestoration));
-parcelHelpers.export(exports, "createBrowserRouter", ()=>(0, _chunkK6AXKMTTMjs.createBrowserRouter));
-parcelHelpers.export(exports, "createCookie", ()=>(0, _chunkK6AXKMTTMjs.createCookie));
-parcelHelpers.export(exports, "createCookieSessionStorage", ()=>(0, _chunkK6AXKMTTMjs.createCookieSessionStorage));
-parcelHelpers.export(exports, "createHashRouter", ()=>(0, _chunkK6AXKMTTMjs.createHashRouter));
-parcelHelpers.export(exports, "createMemoryRouter", ()=>(0, _chunkK6AXKMTTMjs.createMemoryRouter));
-parcelHelpers.export(exports, "createMemorySessionStorage", ()=>(0, _chunkK6AXKMTTMjs.createMemorySessionStorage));
-parcelHelpers.export(exports, "createPath", ()=>(0, _chunkK6AXKMTTMjs.createPath));
-parcelHelpers.export(exports, "createRequestHandler", ()=>(0, _chunkK6AXKMTTMjs.createRequestHandler));
-parcelHelpers.export(exports, "createRoutesFromChildren", ()=>(0, _chunkK6AXKMTTMjs.createRoutesFromChildren));
-parcelHelpers.export(exports, "createRoutesFromElements", ()=>(0, _chunkK6AXKMTTMjs.createRoutesFromElements));
-parcelHelpers.export(exports, "createRoutesStub", ()=>(0, _chunkK6AXKMTTMjs.createRoutesStub));
-parcelHelpers.export(exports, "createSearchParams", ()=>(0, _chunkK6AXKMTTMjs.createSearchParams));
-parcelHelpers.export(exports, "createSession", ()=>(0, _chunkK6AXKMTTMjs.createSession));
-parcelHelpers.export(exports, "createSessionStorage", ()=>(0, _chunkK6AXKMTTMjs.createSessionStorage));
-parcelHelpers.export(exports, "createStaticHandler", ()=>(0, _chunkK6AXKMTTMjs.createStaticHandler));
-parcelHelpers.export(exports, "createStaticRouter", ()=>(0, _chunkK6AXKMTTMjs.createStaticRouter));
-parcelHelpers.export(exports, "data", ()=>(0, _chunkK6AXKMTTMjs.data));
-parcelHelpers.export(exports, "generatePath", ()=>(0, _chunkK6AXKMTTMjs.generatePath));
-parcelHelpers.export(exports, "isCookie", ()=>(0, _chunkK6AXKMTTMjs.isCookie));
-parcelHelpers.export(exports, "isRouteErrorResponse", ()=>(0, _chunkK6AXKMTTMjs.isRouteErrorResponse));
-parcelHelpers.export(exports, "isSession", ()=>(0, _chunkK6AXKMTTMjs.isSession));
-parcelHelpers.export(exports, "matchPath", ()=>(0, _chunkK6AXKMTTMjs.matchPath));
-parcelHelpers.export(exports, "matchRoutes", ()=>(0, _chunkK6AXKMTTMjs.matchRoutes));
-parcelHelpers.export(exports, "parsePath", ()=>(0, _chunkK6AXKMTTMjs.parsePath));
-parcelHelpers.export(exports, "redirect", ()=>(0, _chunkK6AXKMTTMjs.redirect));
-parcelHelpers.export(exports, "redirectDocument", ()=>(0, _chunkK6AXKMTTMjs.redirectDocument));
-parcelHelpers.export(exports, "renderMatches", ()=>(0, _chunkK6AXKMTTMjs.renderMatches));
-parcelHelpers.export(exports, "replace", ()=>(0, _chunkK6AXKMTTMjs.replace));
-parcelHelpers.export(exports, "resolvePath", ()=>(0, _chunkK6AXKMTTMjs.resolvePath));
-parcelHelpers.export(exports, "unstable_HistoryRouter", ()=>(0, _chunkK6AXKMTTMjs.HistoryRouter));
-parcelHelpers.export(exports, "unstable_setDevServerHooks", ()=>(0, _chunkK6AXKMTTMjs.setDevServerHooks));
-parcelHelpers.export(exports, "unstable_usePrompt", ()=>(0, _chunkK6AXKMTTMjs.usePrompt));
-parcelHelpers.export(exports, "useActionData", ()=>(0, _chunkK6AXKMTTMjs.useActionData));
-parcelHelpers.export(exports, "useAsyncError", ()=>(0, _chunkK6AXKMTTMjs.useAsyncError));
-parcelHelpers.export(exports, "useAsyncValue", ()=>(0, _chunkK6AXKMTTMjs.useAsyncValue));
-parcelHelpers.export(exports, "useBeforeUnload", ()=>(0, _chunkK6AXKMTTMjs.useBeforeUnload));
-parcelHelpers.export(exports, "useBlocker", ()=>(0, _chunkK6AXKMTTMjs.useBlocker));
-parcelHelpers.export(exports, "useFetcher", ()=>(0, _chunkK6AXKMTTMjs.useFetcher));
-parcelHelpers.export(exports, "useFetchers", ()=>(0, _chunkK6AXKMTTMjs.useFetchers));
-parcelHelpers.export(exports, "useFormAction", ()=>(0, _chunkK6AXKMTTMjs.useFormAction));
-parcelHelpers.export(exports, "useHref", ()=>(0, _chunkK6AXKMTTMjs.useHref));
-parcelHelpers.export(exports, "useInRouterContext", ()=>(0, _chunkK6AXKMTTMjs.useInRouterContext));
-parcelHelpers.export(exports, "useLinkClickHandler", ()=>(0, _chunkK6AXKMTTMjs.useLinkClickHandler));
-parcelHelpers.export(exports, "useLoaderData", ()=>(0, _chunkK6AXKMTTMjs.useLoaderData));
-parcelHelpers.export(exports, "useLocation", ()=>(0, _chunkK6AXKMTTMjs.useLocation));
-parcelHelpers.export(exports, "useMatch", ()=>(0, _chunkK6AXKMTTMjs.useMatch));
-parcelHelpers.export(exports, "useMatches", ()=>(0, _chunkK6AXKMTTMjs.useMatches));
-parcelHelpers.export(exports, "useNavigate", ()=>(0, _chunkK6AXKMTTMjs.useNavigate));
-parcelHelpers.export(exports, "useNavigation", ()=>(0, _chunkK6AXKMTTMjs.useNavigation));
-parcelHelpers.export(exports, "useNavigationType", ()=>(0, _chunkK6AXKMTTMjs.useNavigationType));
-parcelHelpers.export(exports, "useOutlet", ()=>(0, _chunkK6AXKMTTMjs.useOutlet));
-parcelHelpers.export(exports, "useOutletContext", ()=>(0, _chunkK6AXKMTTMjs.useOutletContext));
-parcelHelpers.export(exports, "useParams", ()=>(0, _chunkK6AXKMTTMjs.useParams));
-parcelHelpers.export(exports, "useResolvedPath", ()=>(0, _chunkK6AXKMTTMjs.useResolvedPath));
-parcelHelpers.export(exports, "useRevalidator", ()=>(0, _chunkK6AXKMTTMjs.useRevalidator));
-parcelHelpers.export(exports, "useRouteError", ()=>(0, _chunkK6AXKMTTMjs.useRouteError));
-parcelHelpers.export(exports, "useRouteLoaderData", ()=>(0, _chunkK6AXKMTTMjs.useRouteLoaderData));
-parcelHelpers.export(exports, "useRoutes", ()=>(0, _chunkK6AXKMTTMjs.useRoutes));
-parcelHelpers.export(exports, "useSearchParams", ()=>(0, _chunkK6AXKMTTMjs.useSearchParams));
-parcelHelpers.export(exports, "useSubmit", ()=>(0, _chunkK6AXKMTTMjs.useSubmit));
-parcelHelpers.export(exports, "useViewTransitionState", ()=>(0, _chunkK6AXKMTTMjs.useViewTransitionState));
-var _chunkK6AXKMTTMjs = require("./chunk-K6AXKMTT.mjs");
+parcelHelpers.export(exports, "Await", ()=>(0, _chunkSYFQ2XB5Mjs.Await));
+parcelHelpers.export(exports, "BrowserRouter", ()=>(0, _chunkSYFQ2XB5Mjs.BrowserRouter));
+parcelHelpers.export(exports, "Form", ()=>(0, _chunkSYFQ2XB5Mjs.Form));
+parcelHelpers.export(exports, "HashRouter", ()=>(0, _chunkSYFQ2XB5Mjs.HashRouter));
+parcelHelpers.export(exports, "IDLE_BLOCKER", ()=>(0, _chunkSYFQ2XB5Mjs.IDLE_BLOCKER));
+parcelHelpers.export(exports, "IDLE_FETCHER", ()=>(0, _chunkSYFQ2XB5Mjs.IDLE_FETCHER));
+parcelHelpers.export(exports, "IDLE_NAVIGATION", ()=>(0, _chunkSYFQ2XB5Mjs.IDLE_NAVIGATION));
+parcelHelpers.export(exports, "Link", ()=>(0, _chunkSYFQ2XB5Mjs.Link));
+parcelHelpers.export(exports, "Links", ()=>(0, _chunkSYFQ2XB5Mjs.Links));
+parcelHelpers.export(exports, "MemoryRouter", ()=>(0, _chunkSYFQ2XB5Mjs.MemoryRouter));
+parcelHelpers.export(exports, "Meta", ()=>(0, _chunkSYFQ2XB5Mjs.Meta));
+parcelHelpers.export(exports, "NavLink", ()=>(0, _chunkSYFQ2XB5Mjs.NavLink));
+parcelHelpers.export(exports, "Navigate", ()=>(0, _chunkSYFQ2XB5Mjs.Navigate));
+parcelHelpers.export(exports, "NavigationType", ()=>(0, _chunkSYFQ2XB5Mjs.Action));
+parcelHelpers.export(exports, "Outlet", ()=>(0, _chunkSYFQ2XB5Mjs.Outlet));
+parcelHelpers.export(exports, "PrefetchPageLinks", ()=>(0, _chunkSYFQ2XB5Mjs.PrefetchPageLinks));
+parcelHelpers.export(exports, "Route", ()=>(0, _chunkSYFQ2XB5Mjs.Route));
+parcelHelpers.export(exports, "Router", ()=>(0, _chunkSYFQ2XB5Mjs.Router));
+parcelHelpers.export(exports, "RouterProvider", ()=>(0, _chunkSYFQ2XB5Mjs.RouterProvider));
+parcelHelpers.export(exports, "Routes", ()=>(0, _chunkSYFQ2XB5Mjs.Routes));
+parcelHelpers.export(exports, "Scripts", ()=>(0, _chunkSYFQ2XB5Mjs.Scripts));
+parcelHelpers.export(exports, "ScrollRestoration", ()=>(0, _chunkSYFQ2XB5Mjs.ScrollRestoration));
+parcelHelpers.export(exports, "ServerRouter", ()=>(0, _chunkSYFQ2XB5Mjs.ServerRouter));
+parcelHelpers.export(exports, "StaticRouter", ()=>(0, _chunkSYFQ2XB5Mjs.StaticRouter));
+parcelHelpers.export(exports, "StaticRouterProvider", ()=>(0, _chunkSYFQ2XB5Mjs.StaticRouterProvider));
+parcelHelpers.export(exports, "UNSAFE_DataRouterContext", ()=>(0, _chunkSYFQ2XB5Mjs.DataRouterContext));
+parcelHelpers.export(exports, "UNSAFE_DataRouterStateContext", ()=>(0, _chunkSYFQ2XB5Mjs.DataRouterStateContext));
+parcelHelpers.export(exports, "UNSAFE_ErrorResponseImpl", ()=>(0, _chunkSYFQ2XB5Mjs.ErrorResponseImpl));
+parcelHelpers.export(exports, "UNSAFE_FetchersContext", ()=>(0, _chunkSYFQ2XB5Mjs.FetchersContext));
+parcelHelpers.export(exports, "UNSAFE_FrameworkContext", ()=>(0, _chunkSYFQ2XB5Mjs.FrameworkContext));
+parcelHelpers.export(exports, "UNSAFE_LocationContext", ()=>(0, _chunkSYFQ2XB5Mjs.LocationContext));
+parcelHelpers.export(exports, "UNSAFE_NavigationContext", ()=>(0, _chunkSYFQ2XB5Mjs.NavigationContext));
+parcelHelpers.export(exports, "UNSAFE_RemixErrorBoundary", ()=>(0, _chunkSYFQ2XB5Mjs.RemixErrorBoundary));
+parcelHelpers.export(exports, "UNSAFE_RouteContext", ()=>(0, _chunkSYFQ2XB5Mjs.RouteContext));
+parcelHelpers.export(exports, "UNSAFE_ServerMode", ()=>(0, _chunkSYFQ2XB5Mjs.ServerMode));
+parcelHelpers.export(exports, "UNSAFE_SingleFetchRedirectSymbol", ()=>(0, _chunkSYFQ2XB5Mjs.SingleFetchRedirectSymbol));
+parcelHelpers.export(exports, "UNSAFE_ViewTransitionContext", ()=>(0, _chunkSYFQ2XB5Mjs.ViewTransitionContext));
+parcelHelpers.export(exports, "UNSAFE_createBrowserHistory", ()=>(0, _chunkSYFQ2XB5Mjs.createBrowserHistory));
+parcelHelpers.export(exports, "UNSAFE_createClientRoutes", ()=>(0, _chunkSYFQ2XB5Mjs.createClientRoutes));
+parcelHelpers.export(exports, "UNSAFE_createClientRoutesWithHMRRevalidationOptOut", ()=>(0, _chunkSYFQ2XB5Mjs.createClientRoutesWithHMRRevalidationOptOut));
+parcelHelpers.export(exports, "UNSAFE_createRouter", ()=>(0, _chunkSYFQ2XB5Mjs.createRouter));
+parcelHelpers.export(exports, "UNSAFE_decodeViaTurboStream", ()=>(0, _chunkSYFQ2XB5Mjs.decodeViaTurboStream));
+parcelHelpers.export(exports, "UNSAFE_deserializeErrors", ()=>(0, _chunkSYFQ2XB5Mjs.deserializeErrors));
+parcelHelpers.export(exports, "UNSAFE_getPatchRoutesOnNavigationFunction", ()=>(0, _chunkSYFQ2XB5Mjs.getPatchRoutesOnNavigationFunction));
+parcelHelpers.export(exports, "UNSAFE_getSingleFetchDataStrategy", ()=>(0, _chunkSYFQ2XB5Mjs.getSingleFetchDataStrategy));
+parcelHelpers.export(exports, "UNSAFE_invariant", ()=>(0, _chunkSYFQ2XB5Mjs.invariant));
+parcelHelpers.export(exports, "UNSAFE_mapRouteProperties", ()=>(0, _chunkSYFQ2XB5Mjs.mapRouteProperties));
+parcelHelpers.export(exports, "UNSAFE_shouldHydrateRouteLoader", ()=>(0, _chunkSYFQ2XB5Mjs.shouldHydrateRouteLoader));
+parcelHelpers.export(exports, "UNSAFE_useFogOFWarDiscovery", ()=>(0, _chunkSYFQ2XB5Mjs.useFogOFWarDiscovery));
+parcelHelpers.export(exports, "UNSAFE_useScrollRestoration", ()=>(0, _chunkSYFQ2XB5Mjs.useScrollRestoration));
+parcelHelpers.export(exports, "createBrowserRouter", ()=>(0, _chunkSYFQ2XB5Mjs.createBrowserRouter));
+parcelHelpers.export(exports, "createCookie", ()=>(0, _chunkSYFQ2XB5Mjs.createCookie));
+parcelHelpers.export(exports, "createCookieSessionStorage", ()=>(0, _chunkSYFQ2XB5Mjs.createCookieSessionStorage));
+parcelHelpers.export(exports, "createHashRouter", ()=>(0, _chunkSYFQ2XB5Mjs.createHashRouter));
+parcelHelpers.export(exports, "createMemoryRouter", ()=>(0, _chunkSYFQ2XB5Mjs.createMemoryRouter));
+parcelHelpers.export(exports, "createMemorySessionStorage", ()=>(0, _chunkSYFQ2XB5Mjs.createMemorySessionStorage));
+parcelHelpers.export(exports, "createPath", ()=>(0, _chunkSYFQ2XB5Mjs.createPath));
+parcelHelpers.export(exports, "createRequestHandler", ()=>(0, _chunkSYFQ2XB5Mjs.createRequestHandler));
+parcelHelpers.export(exports, "createRoutesFromChildren", ()=>(0, _chunkSYFQ2XB5Mjs.createRoutesFromChildren));
+parcelHelpers.export(exports, "createRoutesFromElements", ()=>(0, _chunkSYFQ2XB5Mjs.createRoutesFromElements));
+parcelHelpers.export(exports, "createRoutesStub", ()=>(0, _chunkSYFQ2XB5Mjs.createRoutesStub));
+parcelHelpers.export(exports, "createSearchParams", ()=>(0, _chunkSYFQ2XB5Mjs.createSearchParams));
+parcelHelpers.export(exports, "createSession", ()=>(0, _chunkSYFQ2XB5Mjs.createSession));
+parcelHelpers.export(exports, "createSessionStorage", ()=>(0, _chunkSYFQ2XB5Mjs.createSessionStorage));
+parcelHelpers.export(exports, "createStaticHandler", ()=>(0, _chunkSYFQ2XB5Mjs.createStaticHandler));
+parcelHelpers.export(exports, "createStaticRouter", ()=>(0, _chunkSYFQ2XB5Mjs.createStaticRouter));
+parcelHelpers.export(exports, "data", ()=>(0, _chunkSYFQ2XB5Mjs.data));
+parcelHelpers.export(exports, "generatePath", ()=>(0, _chunkSYFQ2XB5Mjs.generatePath));
+parcelHelpers.export(exports, "isCookie", ()=>(0, _chunkSYFQ2XB5Mjs.isCookie));
+parcelHelpers.export(exports, "isRouteErrorResponse", ()=>(0, _chunkSYFQ2XB5Mjs.isRouteErrorResponse));
+parcelHelpers.export(exports, "isSession", ()=>(0, _chunkSYFQ2XB5Mjs.isSession));
+parcelHelpers.export(exports, "matchPath", ()=>(0, _chunkSYFQ2XB5Mjs.matchPath));
+parcelHelpers.export(exports, "matchRoutes", ()=>(0, _chunkSYFQ2XB5Mjs.matchRoutes));
+parcelHelpers.export(exports, "parsePath", ()=>(0, _chunkSYFQ2XB5Mjs.parsePath));
+parcelHelpers.export(exports, "redirect", ()=>(0, _chunkSYFQ2XB5Mjs.redirect));
+parcelHelpers.export(exports, "redirectDocument", ()=>(0, _chunkSYFQ2XB5Mjs.redirectDocument));
+parcelHelpers.export(exports, "renderMatches", ()=>(0, _chunkSYFQ2XB5Mjs.renderMatches));
+parcelHelpers.export(exports, "replace", ()=>(0, _chunkSYFQ2XB5Mjs.replace));
+parcelHelpers.export(exports, "resolvePath", ()=>(0, _chunkSYFQ2XB5Mjs.resolvePath));
+parcelHelpers.export(exports, "unstable_HistoryRouter", ()=>(0, _chunkSYFQ2XB5Mjs.HistoryRouter));
+parcelHelpers.export(exports, "unstable_setDevServerHooks", ()=>(0, _chunkSYFQ2XB5Mjs.setDevServerHooks));
+parcelHelpers.export(exports, "unstable_usePrompt", ()=>(0, _chunkSYFQ2XB5Mjs.usePrompt));
+parcelHelpers.export(exports, "useActionData", ()=>(0, _chunkSYFQ2XB5Mjs.useActionData));
+parcelHelpers.export(exports, "useAsyncError", ()=>(0, _chunkSYFQ2XB5Mjs.useAsyncError));
+parcelHelpers.export(exports, "useAsyncValue", ()=>(0, _chunkSYFQ2XB5Mjs.useAsyncValue));
+parcelHelpers.export(exports, "useBeforeUnload", ()=>(0, _chunkSYFQ2XB5Mjs.useBeforeUnload));
+parcelHelpers.export(exports, "useBlocker", ()=>(0, _chunkSYFQ2XB5Mjs.useBlocker));
+parcelHelpers.export(exports, "useFetcher", ()=>(0, _chunkSYFQ2XB5Mjs.useFetcher));
+parcelHelpers.export(exports, "useFetchers", ()=>(0, _chunkSYFQ2XB5Mjs.useFetchers));
+parcelHelpers.export(exports, "useFormAction", ()=>(0, _chunkSYFQ2XB5Mjs.useFormAction));
+parcelHelpers.export(exports, "useHref", ()=>(0, _chunkSYFQ2XB5Mjs.useHref));
+parcelHelpers.export(exports, "useInRouterContext", ()=>(0, _chunkSYFQ2XB5Mjs.useInRouterContext));
+parcelHelpers.export(exports, "useLinkClickHandler", ()=>(0, _chunkSYFQ2XB5Mjs.useLinkClickHandler));
+parcelHelpers.export(exports, "useLoaderData", ()=>(0, _chunkSYFQ2XB5Mjs.useLoaderData));
+parcelHelpers.export(exports, "useLocation", ()=>(0, _chunkSYFQ2XB5Mjs.useLocation));
+parcelHelpers.export(exports, "useMatch", ()=>(0, _chunkSYFQ2XB5Mjs.useMatch));
+parcelHelpers.export(exports, "useMatches", ()=>(0, _chunkSYFQ2XB5Mjs.useMatches));
+parcelHelpers.export(exports, "useNavigate", ()=>(0, _chunkSYFQ2XB5Mjs.useNavigate));
+parcelHelpers.export(exports, "useNavigation", ()=>(0, _chunkSYFQ2XB5Mjs.useNavigation));
+parcelHelpers.export(exports, "useNavigationType", ()=>(0, _chunkSYFQ2XB5Mjs.useNavigationType));
+parcelHelpers.export(exports, "useOutlet", ()=>(0, _chunkSYFQ2XB5Mjs.useOutlet));
+parcelHelpers.export(exports, "useOutletContext", ()=>(0, _chunkSYFQ2XB5Mjs.useOutletContext));
+parcelHelpers.export(exports, "useParams", ()=>(0, _chunkSYFQ2XB5Mjs.useParams));
+parcelHelpers.export(exports, "useResolvedPath", ()=>(0, _chunkSYFQ2XB5Mjs.useResolvedPath));
+parcelHelpers.export(exports, "useRevalidator", ()=>(0, _chunkSYFQ2XB5Mjs.useRevalidator));
+parcelHelpers.export(exports, "useRouteError", ()=>(0, _chunkSYFQ2XB5Mjs.useRouteError));
+parcelHelpers.export(exports, "useRouteLoaderData", ()=>(0, _chunkSYFQ2XB5Mjs.useRouteLoaderData));
+parcelHelpers.export(exports, "useRoutes", ()=>(0, _chunkSYFQ2XB5Mjs.useRoutes));
+parcelHelpers.export(exports, "useSearchParams", ()=>(0, _chunkSYFQ2XB5Mjs.useSearchParams));
+parcelHelpers.export(exports, "useSubmit", ()=>(0, _chunkSYFQ2XB5Mjs.useSubmit));
+parcelHelpers.export(exports, "useViewTransitionState", ()=>(0, _chunkSYFQ2XB5Mjs.useViewTransitionState));
+var _chunkSYFQ2XB5Mjs = require("./chunk-SYFQ2XB5.mjs");
 
-},{"./chunk-K6AXKMTT.mjs":"2WGkf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2WGkf":[function(require,module,exports) {
+},{"./chunk-SYFQ2XB5.mjs":"1YTJ3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1YTJ3":[function(require,module,exports) {
 /**
- * react-router v7.1.1
+ * react-router v7.1.3
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -29982,8 +29964,8 @@ var _turboStream = require("turbo-stream");
 var _cookie = require("cookie");
 // lib/server-runtime/headers.ts
 var _setCookieParser = require("set-cookie-parser");
-var $05ffa4f0e0421827$import_meta = Object.assign(Object.create(null), {
-    url: "file:///node_modules/react-router/dist/development/chunk-K6AXKMTT.mjs"
+var $d27cd9389be19f7a$import_meta = Object.assign(Object.create(null), {
+    url: "file:///node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs"
 });
 var global = arguments[3];
 var Action = /* @__PURE__ */ ((Action2)=>{
@@ -30559,7 +30541,7 @@ function decodePath(value) {
     try {
         return value.split("/").map((v)=>decodeURIComponent(v).replace(/\//g, "%2F")).join("/");
     } catch (error) {
-        warning(false, `The URL path "${value}" could not be decoded because it is is a malformed URL segment. This is probably due to a bad percent encoding (${error}).`);
+        warning(false, `The URL path "${value}" could not be decoded because it is a malformed URL segment. This is probably due to a bad percent encoding (${error}).`);
         return value;
     }
 }
@@ -30908,6 +30890,9 @@ function createRouter(init) {
                 if (fetchersQueuedForDeletion.has(key)) unmountedFetchers.push(key);
                 else mountedFetchers.push(key);
             }
+        });
+        fetchersQueuedForDeletion.forEach((key)=>{
+            if (!state.fetchers.has(key) && !fetchControllers.has(key)) unmountedFetchers.push(key);
         });
         [
             ...subscribers
@@ -33774,10 +33759,10 @@ function RouterProvider({ router, flushSync: reactDomFlushSyncImpl }) {
     let [interruption, setInterruption] = _react.useState();
     let fetcherData = _react.useRef(/* @__PURE__ */ new Map());
     let setState = _react.useCallback((newState, { deletedFetchers, flushSync, viewTransitionOpts })=>{
-        deletedFetchers.forEach((key)=>fetcherData.current.delete(key));
         newState.fetchers.forEach((fetcher, key)=>{
             if (fetcher.data !== void 0) fetcherData.current.set(key, fetcher.data);
         });
+        deletedFetchers.forEach((key)=>fetcherData.current.delete(key));
         warnOnce(flushSync === false || reactDomFlushSyncImpl != null, 'You provided the `flushSync` option to a router update, but you are not using the `<RouterProvider>` from `react-router/dom` so `ReactDOM.flushSync()` is unavailable.  Please update your app to `import { RouterProvider } from "react-router/dom"` and ensure you have `react-dom` installed as a dependency to use the `flushSync` option.');
         let isViewTransitionAvailable = router.window != null && router.window.document != null && typeof router.window.document.startViewTransition === "function";
         warnOnce(viewTransitionOpts == null || isViewTransitionAvailable, "You provided the `viewTransition` option to a router update, but you do not appear to be running in a DOM environment as `window.startViewTransition` is not available.");
@@ -34302,7 +34287,7 @@ async function loadRouteModule(route, routeModulesCache) {
         console.error(`Error loading route module \`${route.module}\`, reloading page...`);
         console.error(error);
         if (window.__reactRouterContext && window.__reactRouterContext.isSpaMode && // @ts-expect-error
-        $05ffa4f0e0421827$import_meta.hot) throw error;
+        $d27cd9389be19f7a$import_meta.hot) throw error;
         window.location.reload();
         return new Promise(()=>{});
     }
@@ -35691,7 +35676,7 @@ function mergeRefs(...refs) {
 // lib/dom/lib.tsx
 var isBrowser = typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined";
 try {
-    if (isBrowser) window.__reactRouterVersion = "7.1.1";
+    if (isBrowser) window.__reactRouterVersion = "7.1.3";
 } catch (e) {}
 function createBrowserRouter(routes, opts) {
     return createRouter({
@@ -38864,7 +38849,6 @@ var _colDefault = parcelHelpers.interopDefault(_col);
 var _row = require("react-bootstrap/Row");
 var _rowDefault = parcelHelpers.interopDefault(_row);
 var _reactRouter = require("react-router");
-var _reactRouterDom = require("react-router-dom");
 var _reactBootstrap = require("react-bootstrap");
 var _s = $RefreshSig$();
 const MovieView = ({ movies })=>{
@@ -38980,7 +38964,7 @@ const MovieView = ({ movies })=>{
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
                         className: "w-10",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
                             to: "/",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 className: "back-button",
@@ -39027,7 +39011,7 @@ $RefreshReg$(_c, "MovieView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./movie-view.scss":"cp3d4","react-bootstrap/Col":"2L2I6","react-bootstrap/Row":"cMC39","react-router":"dXVwI","react-router-dom":"lyno9","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cp3d4":[function() {},{}],"2L2I6":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./movie-view.scss":"cp3d4","react-bootstrap/Col":"2L2I6","react-bootstrap/Row":"cMC39","react-router":"dXVwI","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cp3d4":[function() {},{}],"2L2I6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useCol", ()=>useCol);
@@ -51083,7 +51067,7 @@ var _form = require("react-bootstrap/Form");
 var _formDefault = parcelHelpers.interopDefault(_form);
 var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _reactRouterDom = require("react-router-dom");
+var _reactRouter = require("react-router");
 var _s = $RefreshSig$();
 const LoginView = ({ onLoggedIn })=>{
     _s();
@@ -51179,7 +51163,7 @@ const LoginView = ({ onLoggedIn })=>{
                 lineNumber: 65,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
                 to: "/signup",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                     children: "Sign up"
@@ -51210,7 +51194,7 @@ $RefreshReg$(_c, "LoginView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap/Form":"iBZ80","react-bootstrap/Button":"aPzUt","react-router-dom":"lyno9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jDmiJ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap/Form":"iBZ80","react-bootstrap/Button":"aPzUt","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jDmiJ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$7971 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -51226,7 +51210,7 @@ var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _form = require("react-bootstrap/Form");
 var _formDefault = parcelHelpers.interopDefault(_form);
-var _reactRouterDom = require("react-router-dom");
+var _reactRouter = require("react-router");
 var _s = $RefreshSig$();
 const SignupView = ()=>{
     _s();
@@ -51376,7 +51360,7 @@ const SignupView = ()=>{
                 lineNumber: 84,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
                 to: "/login",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                     children: "Log in"
@@ -51407,7 +51391,7 @@ $RefreshReg$(_c, "SignupView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80","react-router-dom":"lyno9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"loco3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"loco3":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$459d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -51694,7 +51678,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "NavigationBar", ()=>NavigationBar);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactBootstrap = require("react-bootstrap");
-var _reactRouterDom = require("react-router-dom");
+var _reactRouter = require("react-router");
 const NavigationBar = ({ user, onLoggedOut })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar), {
         bg: "light",
@@ -51702,7 +51686,7 @@ const NavigationBar = ({ user, onLoggedOut })=>{
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Brand, {
-                    as: (0, _reactRouterDom.Link),
+                    as: (0, _reactRouter.Link),
                     to: "/",
                     children: "MyFlix App"
                 }, void 0, false, {
@@ -51725,7 +51709,7 @@ const NavigationBar = ({ user, onLoggedOut })=>{
                             !user && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
-                                        as: (0, _reactRouterDom.Link),
+                                        as: (0, _reactRouter.Link),
                                         to: "/login",
                                         children: "Login"
                                     }, void 0, false, {
@@ -51734,7 +51718,7 @@ const NavigationBar = ({ user, onLoggedOut })=>{
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
-                                        as: (0, _reactRouterDom.Link),
+                                        as: (0, _reactRouter.Link),
                                         to: "/signup",
                                         children: "Signup"
                                     }, void 0, false, {
@@ -51747,7 +51731,7 @@ const NavigationBar = ({ user, onLoggedOut })=>{
                             user && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
-                                        as: (0, _reactRouterDom.Link),
+                                        as: (0, _reactRouter.Link),
                                         to: "/",
                                         children: "Home"
                                     }, void 0, false, {
@@ -51756,7 +51740,7 @@ const NavigationBar = ({ user, onLoggedOut })=>{
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
-                                        as: (0, _reactRouterDom.Link),
+                                        as: (0, _reactRouter.Link),
                                         to: "/profile",
                                         children: "Profile"
                                     }, void 0, false, {
@@ -51806,6 +51790,6 @@ $RefreshReg$(_c, "NavigationBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","react-router-dom":"lyno9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"i5LP7":[function() {},{}],"lJZlQ":[function() {},{}]},["4s3Ar","1xC6H","d8Dch"], "d8Dch", "parcelRequire7aed")
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"i5LP7":[function() {},{}],"lJZlQ":[function() {},{}]},["4s3Ar","1xC6H","d8Dch"], "d8Dch", "parcelRequire7aed")
 
 //# sourceMappingURL=index.b4b6dfad.js.map

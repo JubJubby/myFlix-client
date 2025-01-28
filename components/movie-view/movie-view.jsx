@@ -2,7 +2,7 @@ import "./movie-view.scss";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { Container } from "react-bootstrap";
 
 export const MovieView = ({ movies }) => {
